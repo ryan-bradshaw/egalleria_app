@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Users/ryanbradshaw/Desktop/Projects/egalleria_app/flask_app/static/css/style.css">
+    <title>eGalleria - Online Fine Art Gallery</title>
+</head>
+<body>
+    <div class="header-login">
+        <h1 class="header-title">e G a l l e r i a</h1>
+        <ul class="header-categories">
+            <li><a href="">Artists</a></li>
+            <li><a href="">Collections</a></li>
+            <li><a href="">NFTs</a></li>
+            <li><a href="">Sales</a></li>
+            <li><a href="">About Us</a></li>
+        </ul>
+    </div>
+    <div class="container-login">
+        <div class="login-featured-art">
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+        </div>
+        <div class="login">
+            <div>
+                <form action="/login" method="post" class="form-login">
+                    <h2 class="form-header">Welcome back</h2>
+                    <p class="form-field">
+                        Email:<input type="text" name="email" id="email">
+                    </p>
+                    <p class="form-field">
+                        Password:<input type="password" name="password" id="password">
+                    </p>
+                    <p>
+                        <button class="form-button-submit">Login</button>
+                    </p>
+                </form>
+            </div>
+
+        </div>
+        <div class="register">
+            <form action="/register" method="post" class="form-login">
+                <h2 class="form-header">New here? Register</h2>
+                <p class="form-field">
+                    Email:<input type="text" name="email" id="email">
+                </p>
+                <p class="form-field">
+                    Username:<input type="text" name="username" id="username">
+                </p>
+                <p class="form-field">
+                    First Name:<input type="text" name="first_name" id="first_name">
+                </p>
+                <p class="form-field">
+                    Last Name:<input type="text" name="last_name" id="last_name">
+                </p>
+                <p class="form-field">
+                    Password:<input type="password" name="password" id="password">
+                </p>
+                <p class="form-field">
+                    Confirm Password:<input type="password" name="confirm" id="confirm">
+                </p>
+                <p>
+                    <button class="form-button-submit">Create Account</button>
+                </p>
+            </form>
+        </div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    <div class="footer-login">
+
+    </div>
+    <script src="flask_app/static/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+/* 
+dark blue = #073a65
+yellow = #cdb114
+light blue = #065c97
+red = #a20d17
+pink = #c7846a 
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-login{
+    color: #073a65;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header-categories{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: .8em;
+    margin-bottom: .8em;
+    margin-right: 10em;
+    margin-left: 10em;
+}
